@@ -31,7 +31,7 @@ public class Delete {
             session.delete(user);
 
             // delete user id = 4
-            System.out.println("Deleting user username = James");
+            System.out.println("Deleting user with id: 5");
             session.createQuery("delete from anotatedClass.User where userId=5").executeUpdate();
 
             // commit transaction

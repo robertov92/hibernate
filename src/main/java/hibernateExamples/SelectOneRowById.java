@@ -17,14 +17,15 @@ public class SelectOneRowById {
         Session session;
 
         try{
+            int userId = 1;
 
             // get a new session and start transaction
             session = factory.getCurrentSession();
             session.beginTransaction();
 
             // retrieve user based on id
-            System.out.println("Getting user with id: " + 1);
-            User user = session.get(User.class, 1);
+            System.out.println("Getting user with id: " + userId);
+            User user = session.get(User.class, userId);
             System.out.println("Get completed: " + user);
 
             // commit transaction
